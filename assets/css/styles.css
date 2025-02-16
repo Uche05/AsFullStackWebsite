@@ -1,4 +1,22 @@
 *{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
+
+header{
+    background-color: #69B2E0;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+/* 1- 69B2E0, ~ Argentinian Blue
+2- EFCB68, ~ Naples yellow
+3- E1EFE6, ~ Honeydew
+4- B2C2CE, ~ Powder blue
+5- 000411, ~ Rich black
+ */
