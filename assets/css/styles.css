@@ -1,3 +1,15 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS Variables */
+:root{
+    --argentian-blue :#69b2e0;
+    --naples-yellow :#efcb68;
+    --honeydew :#e1efe6;
+    --powder-blue :#b2c2ce;
+    --rich-black :#000411;
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -5,18 +17,111 @@
 }
 
 header{
-    background-color: #69B2E0;
-    position: fixed;
+    font-family: 'Work Sans';
+    background-color: var(--argentian-blue);
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    z-index: 100;
+    padding: 0.5rem 1rem;
+    /* Header's position has to be "relative" to nav-toggle's menu */
+    position: relative;
 }
 
-/* 1- 69B2E0, ~ Argentinian Blue
-2- EFCB68, ~ Naples yellow
-3- E1EFE6, ~ Honeydew
-4- B2C2CE, ~ Powder blue
-5- 000411, ~ Rich black
- */
+
+main{
+    font-family: 'Noto Sans', 'Open Sans', 'Roboto';
+    margin: 5px auto;
+    width: fit-content;
+    font-size: 1.5rem;
+    background-color: var(--powder-blue);
+    padding-top: 7%;
+    text-align: center;
+}
+
+header a {
+    text-decoration: none;
+}
+
+#menu a {
+    color: var(--rich-black);
+}
+
+#menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 1.5px;
+    font-size: 105%;
+}
+
+#menu>li {
+    margin-bottom: 1rem;
+}
+
+
+#menu a:hover {
+    border-bottom: 3px solid var(--rich-black);
+    border-radius: 0 0 1% 1%;
+}
+
+nav{
+    position: absolute;
+    background-color: inherit;
+    width: 100%;
+    left: 0;
+    top: 100%;
+    padding: 0 1rem;
+    box-shadow: 0 2px 2px var(--rich-black);
+    /* Keep the nav off for mobile phones to use toggle to set it to "block" */
+    display: none;
+}
+
+/* Nav toggle */
+#nav-tog:checked ~ nav {
+    display: block !important;
+}
+
+#nav-tog {
+    position: absolute;
+    left: -1000px;
+    /*The checkbox won't show*/
+}
+
+.nav-tog-label {
+    font-size: 3rem;
+    color: var(--rich-black);
+}
+
+
+/* Media Queries for larger devices */
+
+@media screen and (min-width: 768px) {
+    /* Header and nav */
+
+    nav{
+        display: block;
+        position: relative;
+        box-shadow: none;
+        width: fit-content;
+        padding-right: 1rem;
+    }
+
+    #menu{
+        display: flex;
+    }
+
+    #menu>li{
+        padding-left: 1rem;
+    }
+
+    .nav-tog-label{
+        display: none;
+    }
+
+    #logo{
+        font-size: 280%;
+        line-height: 75px;
+        margin: 0 0.5rem;
+    }
+}
