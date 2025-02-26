@@ -96,7 +96,6 @@ main{
 }
 
 #cleaning-welcome{
-    width: 100%;
     position: relative; /* Allows absolute positioning inside */
     display: inline-block; /* Shrinks container to fit the image */
 }
@@ -108,8 +107,8 @@ main{
 
 #cleaning-welcome-text {
     position: absolute; /* Allows precise positioning */
-    top: 96%; /* Moves text down */
-    left: 50%; /* Moves text right */
+    top: 70%; /* Moves text down */
+    left: 60%; /* Moves text right */
     transform: translate(-50%, -50%); /* Centers text perfectly */
     color: white; /* Ensures readability */
     font-size: 5rem;
