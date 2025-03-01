@@ -8,6 +8,7 @@
     --honeydew :#e1efe6;
     --powder-blue :#b2c2ce;
     --rich-black :#000411;
+    --emerald: #50C878;
 }
 
 *{
@@ -76,7 +77,6 @@ nav{
 #nav-tog {
     position: absolute;
     left: -1000px;
-    /*The checkbox won't show*/
 }
 
 .nav-tog-label {
@@ -91,31 +91,57 @@ main{
     margin: 5px auto;
     width: fit-content;
     font-size: 1.5rem;
-    background-color: var(--powder-blue);
     text-align: center;
 }
+/* Cleaning welcome div style */
 
 #cleaning-welcome{
-    position: relative; /* Allows absolute positioning inside */
-    display: inline-block; /* Shrinks container to fit the image */
+    display: inline-block;
+    margin-bottom: 0;
 }
 
 #cleaning-welcome img {
-    width: 100%; /* Ensures image fills the container */
+    width: 100%;
     display: block;
 }
 
-#cleaning-welcome-text {
-    position: absolute; /* Allows precise positioning */
-    top: 70%; /* Moves text down */
-    left: 60%; /* Moves text right */
-    transform: translate(-50%, -50%); /* Centers text perfectly */
-    color: white; /* Ensures readability */
-    font-size: 5rem;
-    font-weight: bold;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Adds contrast */
+/* Cleaning section and  Button styling */
+#btn-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem 0;
 }
 
+#btnContact,
+#btnLogin1, #btnLogin2,
+#btnLoginAdv{
+    color: white;
+    padding: 0.5rem 0.2rem;
+    border: none;
+    margin: 1rem;
+    cursor: pointer;
+    height: 50px;
+    width: 100px;
+    font-size: medium;
+}
+
+#btnLogin1{
+    background-color: var(--argentian-blue);
+}
+
+#btnLogin2{
+    background-color: var(--naples-yellow);
+}
+
+#btnContact{
+    background-color: var(--rich-black);
+}
+
+#btnLoginAdv{
+    background-color: var(--emerald);
+}
 
 /* Media Queries for larger devices */
 
@@ -147,5 +173,9 @@ main{
         font-size: 280%;
         line-height: 75px;
         margin: 0 0.5rem;
+    }
+
+    #btn-section{
+        display: block;
     }
 }
