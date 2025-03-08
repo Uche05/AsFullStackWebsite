@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testimonial Section</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+    <div class="w-full max-w-2xl p-6 bg-white shadow-lg rounded-xl">
+        <h2 class="text-2xl font-bold text-center mb-4">What Our Clients Say</h2>
+        
+        <div class="relative overflow-hidden">
+            <div class="testimonial fade active text-center px-4">
+                <img src="https://via.placeholder.com/80" alt="Client 1" class="mx-auto rounded-full mb-2">
+                <p class="text-gray-600 italic">"This cleaning service exceeded my expectations! Our office has never looked better."</p>
+                <h4 class="mt-2 font-semibold">- Sarah Johnson</h4>
+            </div>
+            <div class="testimonial fade text-center px-4 absolute top-0 left-0 w-full">
+                <img src="https://via.placeholder.com/80" alt="Client 2" class="mx-auto rounded-full mb-2">
+                <p class="text-gray-600 italic">"Professional, reliable, and thorough! Highly recommended for commercial spaces."</p>
+                <h4 class="mt-2 font-semibold">- Mark Thompson</h4>
+            </div>
+            <div class="testimonial fade text-center px-4 absolute top-0 left-0 w-full">
+                <img src="https://via.placeholder.com/80" alt="Client 3" class="mx-auto rounded-full mb-2">
+                <p class="text-gray-600 italic">"They always go the extra mile to keep our workspace fresh and clean!"</p>
+                <h4 class="mt-2 font-semibold">- Emily Carter</h4>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll(".testimonial");
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial, i) => {
+                testimonial.classList.remove("active");
+                testimonial.classList.add("fade");
+            });
+            testimonials[index].classList.add("active");
+        }
+        
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        }
+        
+        setInterval(nextTestimonial, 5000);
+    </script>
+</body>
+</html>
