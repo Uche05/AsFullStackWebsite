@@ -5,18 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cleaning with Yink</title>
-
     <!-- CSS Link -->
     <link rel="stylesheet" href="assets/css/styles.css">
-
     <!-- Favicon Link -->
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <body>
-
-
-
     <header>
 
         <h1 id="logo">
@@ -24,8 +19,6 @@
                 Cleaning with Yink
             </a>
         </h1>
-
-        <!--Checkbox Toggle Menu-->
 
         <input type="checkbox" name="nav-tog" id="nav-tog">
         <label for="nav-tog" class="nav-tog-label">
@@ -46,7 +39,7 @@
     <main>
 
         <div id="cleaning-welcome">
-            <img src="assets\images\cleaning1.jpg" alt="#">
+            <img src="assets/images/cleaning1.jpg" alt="cleaning tables">
         </div>
 
 
@@ -65,50 +58,44 @@
                 Our Cleaning Services
             </h2>
 
-            <!-- Note the image and paragraph are to be in the same horizontal standing
-            facing opposite each other like thus: 17|71-->
-
-            <div>
-                <img src="#" alt="#">
-                <p>
-                    Some short text
-                </p>
-            </div>
-
+            <i class="fa-solid fa-star"></i>
+            <p>
+                Our commercial cleaning services ensure a spotless, hygienic, and professional workspace, enhancing both
+                employee productivity and client impressions. We offer tailored cleaning solutions for offices, retail
+                spaces, and industrial facilities, using industry-grade equipment and eco-friendly products. Whether you
+                need daily maintenance or deep cleaning, our expert team delivers reliability and excellence every time.
+            </p>
 
         </section>
 
-        <section id="reviews">
-            <h2>
-                Reviews
-            </h2>
+        <section class="reviews">
+            <div class="testimonial-container">
+                <h2>What Our Clients Say</h2>
+
+                <div class="relative">
+                    <div class="testimonial active">
+                        <img src="#" alt="Client 1">
+                        <p>"This cleaning service exceeded my expectations! Our office has never looked better."</p>
+                        <h4>X</h4>
+                    </div>
+                    <div class="testimonial">
+                        <img src="#" alt="Client 2">
+                        <p>"Professional, reliable, and thorough! Highly recommended for commercial spaces."</p>
+                        <h4>Y</h4>
+                    </div>
+                    <div class="testimonial">
+                        <img src="#" alt="Client 3">
+                        <p>"They always go the extra mile to keep our workspace fresh and clean!"</p>
+                        <h4>Z</h4>
+                    </div>
+                </div>
+            </div>
 
             <!-- Note this will be reviews meaning a rolling/ slider animation and pictures and images used together-->
 
-            <div>
-                <img src="#" alt="#">
-                <p>
-                    Some short text
-                </p>
-            </div>
-
         </section>
 
-        <section id="Conclusion">
-            <h2>
-                Reviews
-            </h2>
 
-            <!-- Note this will be also consist of images and pictures being used together-->
-
-            <div>
-                <img src="#" alt="#">
-                <p>
-                    Some short text
-                </p>
-            </div>
-
-        </section>
     </main>
 
     <footer>
@@ -156,6 +143,25 @@
     <!-- Font awesome link -->
     <script src="https://kit.fontawesome.com/af753a5c1b.js" crossorigin="anonymous"></script>
 
+    <!-- Internal Script -->
+    <script>
+        let currentIndex = 0;
+        const testimonials = document.querySelectorAll(".testimonial");
+        
+        function showTestimonial(index) {
+            testimonials.forEach((testimonial) => {
+                testimonial.classList.remove("active");
+            });
+            testimonials[index].classList.add("active");
+        }
+        
+        function nextTestimonial() {
+            currentIndex = (currentIndex + 1) % testimonials.length;
+            showTestimonial(currentIndex);
+        }
+        
+        setInterval(nextTestimonial, 5000);
+    </script>
 </body>
 
 </html>
