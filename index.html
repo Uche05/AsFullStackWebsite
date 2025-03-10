@@ -27,10 +27,10 @@
 
         <nav>
             <ul id="menu">
-                <li><a href="#">Our Services</a></li>
-                <li><a href="#">Our Testimonials</a></li>
+                <li><a href="#cleaning-services-2">Our Services</a></li>
+                <li><a href="#reviews">Our Testimonials</a></li>
                 <li><a href="#">Work with us!</a></li>
-                <li id="contact-in-header"><a href="#">Contact Us</a></li>
+                <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
 
@@ -69,6 +69,7 @@
         </section>
 
         <section class="reviews">
+
             <div class="testimonial-container">
                 <h2>What Our Clients Say</h2>
 
@@ -89,6 +90,7 @@
                         <h4>Z</h4>
                     </div>
                 </div>
+
             </div>
 
             <!-- Note this will be reviews meaning a rolling/ slider animation and pictures and images used together-->
@@ -132,7 +134,7 @@
             <h3>
                 Contact Us
             </h3>
-            <!-- Write down their contact info -->
+            <!-- Write down their contacts info -->
         </div>
 
         <p>&copy; 2025 Cleaning with Yink</p>
@@ -144,24 +146,7 @@
     <script src="https://kit.fontawesome.com/af753a5c1b.js" crossorigin="anonymous"></script>
 
     <!-- Internal Script -->
-    <script>
-        let currentIndex = 0;
-        const testimonials = document.querySelectorAll(".testimonial");
-        
-        function showTestimonial(index) {
-            testimonials.forEach((testimonial) => {
-                testimonial.classList.remove("active");
-            });
-            testimonials[index].classList.add("active");
-        }
-        
-        function nextTestimonial() {
-            currentIndex = (currentIndex + 1) % testimonials.length;
-            showTestimonial(currentIndex);
-        }
-        
-        setInterval(nextTestimonial, 5000);
-    </script>
+
 </body>
 
 </html>
