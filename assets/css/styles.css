@@ -176,7 +176,33 @@ footer {
     background-color: var(--powder-blue);
     color: white;
     padding: 20px;
+}
+
+#footer-links, #social-networks{
     list-style: none;
+    text-decoration: none;
+    padding-bottom: 20px;
+}
+
+#footer-links li, #social-networks li{
+    display: block-inline;
+    margin: 1rem;
+}
+
+#social-networks{
+    padding-top: 1px;
+    font-size: 200%;
+}
+
+#social-networks a:hover, 
+#footer-links a:hover{
+    color: var(--rich-black);
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 1px 1px;
 }
 
 /* Media Queries for larger devices */
