@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // JavaScript to be fired on all pages
 
 
-    //button to lead me to another page
+    //button to lead a click to another page
     const btnJobPost = document.getElementById('btnLogin1');
     const btnContact = document.getElementById('btnContact');
     const btnStaffLogin = document.getElementById('btnLogin2');
@@ -27,4 +27,9 @@ document.addEventListener("DOMContentLoaded", function () {
     btnAdminLogin.addEventListener('click', function(){
         window.open("admin.html", "_blank");
     });
+
+
+    //testimonial animation style
+
+
 });

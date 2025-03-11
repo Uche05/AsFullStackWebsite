@@ -111,7 +111,7 @@ main{
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin: 1rem 0;
+    margin: 3rem 30px;
 }
 
 #btnContact,
@@ -143,29 +143,54 @@ main{
     background-color: var(--emerald);
 }
 
-/* Review Section */
-.reviews{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 2rem 0;
-}
-
-.active{
+/* Cleaning services 2 */
+#cleaning-services-2{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin: 2rem auto;
+}
+
+#cleaning-services-2 p{
+    text-align: center;
+    font-family: "Noto Sans";
+    font-size: 1.5rem;
     margin: 1rem;
-    padding: 1rem;
-    border: 1px solid var(--powder-blue);
-    border-radius: 5px;
-    width: 300px;
+    padding: 1%;
+}
+
+/* Review Section */
+.reviews-text{
+    padding: 10px;
+    text-align: center;
+    margin: 1rem;
+}
+
+.testimonial-container{
+    padding: 20px;
+    max-width: 500px;
+    margin: 5% auto;
+    border-radius: 14px;
+    border: #50C878 2px solid;
 }
 
 .testimonial{
+    margin-top: 2rem;
+}
+
+.star{
+    color: var(--naples-yellow);
+}
+
+.active{
+    display: block;
+}
+
+.not-active{
     display: none;
 }
+
 
 /* Footer */
 footer {
