@@ -26,6 +26,7 @@ header{
     padding: 0.5rem 1rem;
     /* Header's position has to be "relative" to nav-toggle's menu */
     position: relative;
+    z-index: 100;
 }
 
 
@@ -116,15 +117,18 @@ main{
 
 #btnContact,
 #btnLogin1, #btnLogin2,
-#btnLoginAdv{
+#btnLoginAdv,
+#register-btn{
     color: white;
-    padding: 0.5rem 0.2rem;
+    padding: 0.8rem 0.5rem;
     border: none;
-    margin: 1rem;
+    margin: 1.5rem;
     cursor: pointer;
-    height: 50px;
-    width: 100px;
+    height: 60px;
+    width: 120px;
     font-size: medium;
+    border-radius: 10px;
+    font-family: 'Noto Sans';
 }
 
 #btnLogin1{
@@ -139,7 +143,8 @@ main{
     background-color: var(--rich-black);
 }
 
-#btnLoginAdv{
+#btnLoginAdv,
+#register-btn{
     background-color: var(--emerald);
 }
 
@@ -191,6 +196,36 @@ main{
     display: none;
 }
 
+/* Form style */
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem auto;
+    height: 400px;
+    width: 75%;
+    border-radius: 10px;
+    box-shadow: 4px 4px 30px var(--powder-blue);
+    padding: 10px;
+    gap: 5px;
+    background-color: var(--argentian-blue);
+}
+
+input, textarea{
+    width: 75%;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    border: none;
+}
+
+label{
+    color: white;
+    font-size: 1rem;
+    padding: 0;
+}
+
 
 /* Footer */
 footer {
@@ -210,7 +245,7 @@ footer {
 }
 
 #footer-links li, #social-networks li{
-    display: block-inline;
+    display: block;
     margin: 1rem;
 }
 

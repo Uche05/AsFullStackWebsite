@@ -13,11 +13,8 @@
 
 <body>
     <header>
-
         <h1 id="logo">
-            <a href="index.html">
-                Cleaning with Yink
-            </a>
+            <a href="index.html">Cleaning with Yink</a>
         </h1>
 
         <input type="checkbox" name="nav-tog" id="nav-tog">
@@ -29,52 +26,55 @@
             <ul id="menu">
                 <li><a href="#cleaning-services-2">Our Services</a></li>
                 <li><a href="#reviews">Our Testimonials</a></li>
-                <li><a href="#">Work with us!</a></li>
+                <li><a href="/jobpost.html">Work with us!</a></li>
                 <li><a href="#">Contact Us</a></li>
             </ul>
         </nav>
-
     </header>
 
     <main>
-        
+        <h2>Register your interest here!</h2>
+        <form id="applicationForm">
+            <input type="text" name="full_name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <textarea name="message" placeholder="Cover Letter" required></textarea>
+            <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
+            <input type="tel" pattern="\d{11}" maxlength="11" required placeholder="Enter 11-digit phone number" name="phone">
+            <input type="text" name="location" list="locations" placeholder="Location" required>
+            <datalist id="locations">
+                <option value="bristol">Bristol</option>
+                <option value="london">London</option>
+                <option value="reading">Reading</option>
+                <option value="cheltenham">Cheltenham</option>
+                <option value="birmingham">Birmingham</option>
+            </datalist>
+
+            <button id="register-btn" type="submit">Submit</button>
+        </form>
     </main>
 
     <footer>
-
         <ul id="footer-links">
-            <li><a href="/privacypolicy.html" target="_blank" rel="noopener" aria-label="Here is our Privacy policy">Privacy Policy</a>
-            </li>
-            <li><a href="tandcs.html" target="_blank" rel="noopener" aria-label="Here is our Terms and conditions ">Terms and
-                    Conditions</a></li>
-            <li><a href="/termsofuse.html" target="_blank" rel="noopener" aria-label="Here is our Terms of use ">Terms of use</a></li>
-            <li><a href="/contact.html" target="_blank" rel="noopener" aria-label="Contact us also via this link">Contact Us</a>
-            </li>
-            <li><a href= "/index.html #reviews" target="_blank" rel="noopener" aria-label="Here are our reviews">Reviews</a></li>
-            <li><a href="/jobpost.html" target="_blank" rel="noopener"
-                    aria-label="Wanna work with us, click here to join us!">Recruitment</a></li>
+            <li><a href="/privacypolicy.html" target="_blank" rel="noopener" aria-label="Here is our Privacy policy">Privacy Policy</a></li>
+            <li><a href="tandcs.html" target="_blank" rel="noopener" aria-label="Here is our Terms and conditions">Terms and Conditions</a></li>
+            <li><a href="/termsofuse.html" target="_blank" rel="noopener" aria-label="Here is our Terms of use">Terms of use</a></li>
+            <li><a href="/contact.html" target="_blank" rel="noopener" aria-label="Contact us also via this link">Contact Us</a></li>
+            <li><a href="/index.html#reviews" target="_blank" rel="noopener" aria-label="Here are our reviews">Reviews</a></li>
+            <li><a href="/jobpost.html" target="_blank" rel="noopener" aria-label="Wanna work with us, click here to join us!">Recruitment</a></li>
         </ul>
 
         <ul id="social-networks">
-            <li><a href="http://www.facebook.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our facebook page (Opens in new tab)"><i class="fa-brands fa-facebook"></i></a>
-            </li>
-            <li><a href="http://www.instagram.com/" target="_blank" rel="noopener"
-                    aria-label="Visit our Instagram page (Opens in new tab)"><i class="fa-brands fa-instagram"></i></a>
-            </li>
+            <li><a href="http://www.facebook.com/" target="_blank" rel="noopener" aria-label="Visit our facebook page (Opens in new tab)"><i class="fa-brands fa-facebook"></i></a></li>
+            <li><a href="http://www.instagram.com/" target="_blank" rel="noopener" aria-label="Visit our Instagram page (Opens in new tab)"><i class="fa-brands fa-instagram"></i></a></li>
         </ul>
 
         <div>
-            <h3>
-                Cleaning with Yink Office
-            </h3>
+            <h3>Cleaning with Yink Office</h3>
             <!-- Write down address -->
         </div>
 
         <div>
-            <h3>
-                Contact Us
-            </h3>
+            <h3>Contact Us</h3>
             <!-- Write down their contacts info -->
         </div>
 
@@ -85,9 +85,6 @@
     <script src="assets/js/script.js" crossorigin="anonymous"></script>
     <!-- Font awesome link -->
     <script src="https://kit.fontawesome.com/af753a5c1b.js" crossorigin="anonymous"></script>
-
-    <!-- Internal Script -->
-
 </body>
 
 </html>
